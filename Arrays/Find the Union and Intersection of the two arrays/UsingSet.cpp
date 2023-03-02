@@ -6,18 +6,22 @@ int main(){
 	int b[] = {5,6,7,5,0};
 	int size1 = sizeof(a)/sizeof(a[0]);
 	int size2 = sizeof(b)/sizeof(b[0]);
-	set<int> s(a,a+size1);
+	set<int> U(a,a+size1);
+	set<int> I(a,a+size1);
 	for(int i=0; i<size2; ++i){
-		s.insert(b[i]);
+		U.insert(b[i]);
 	}
 	cout<<"Union : ";
-	for(set<int>::iterator itr = s.begin(); itr!=s.end();++itr){
+	for(set<int>::iterator itr = U.begin(); itr!=U.end();++itr){
 		cout<<*itr<<" ";
 	}
 	cout<<endl;
 	cout<<"Intersection : ";
-	for(int i=0;i<size1;++i){
-		if(find(b,b+size2,a[i])!=(b+size2))
-			cout<<a[i]<<" ";
+	for(int i=0;i<size2;++i){
+		if(I.find(b[i]) != I.end())
+		{
+			I.erase(b[i]);
+			cout<<b[i]<<" ";
+		}
 	}
 }
