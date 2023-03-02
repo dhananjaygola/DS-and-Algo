@@ -13,7 +13,14 @@ int main(){
 	for(int i=0; i<size2; ++i){
 		m[b[i]] += 1;
 	}
+	cout<<"Union : ";
 	for(map<int,int>::iterator itr = m.begin(); itr!=m.end(); ++itr){
 		cout<<itr->first<<" ";
+	}
+	cout<<endl;
+	cout<<"Intersection : ";
+	for(map<int,int>::iterator itr = m.begin(); itr!=m.end(); ++itr){
+		if(itr->second > 1)
+			cout<<itr->first<<" ";
 	}
 }
