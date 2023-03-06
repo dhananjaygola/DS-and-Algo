@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-	int a[] = {2,-1,0,-3};
+	int a[] = {1,-1,8,-2,16,-3};
 	int size = sizeof(a)/sizeof(a[0]);
 	int max_current = a[0], max_global = a[0];
 	for(int i = 1; i < size; ++i){
