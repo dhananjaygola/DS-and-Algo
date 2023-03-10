@@ -28,7 +28,7 @@ int minJumps(int a[], int size){
 }
 
 int main(){
-	int a[] = {4,2,3,4,1,6,7};
+	int a[] = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
 	int size = sizeof(a)/sizeof(a[0]);
 	cout<<minJumps(a,size);
 }
