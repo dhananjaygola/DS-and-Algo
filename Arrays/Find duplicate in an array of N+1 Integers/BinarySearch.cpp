@@ -2,7 +2,6 @@
 using namespace std;
 
 int Duplicate(int a[], int size){
-	//sort(a,a+size);
 	vector<int> nums(a,a+size);
 	auto small_or_equal = [&](int cur) {
             int count = 0;
