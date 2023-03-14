@@ -14,13 +14,17 @@ void allPermutations(int index, vector<int> &input, vector<vector<int>> &next){
 }
 
 int main(){
-	vector<int> input = {2,1,3};
+	vector<int> input = {3,1,2};
 	vector<int> b;
 	vector<vector<int>> output;
 	allPermutations(0,input,output);
+	sort(output.begin(), output.end()); // sort the output to arrange all permutations in lexicographical order
 	auto itr = find(output.begin(), output.end(), input);
 	int a = itr - output.begin();
-	b = output[a+1];
+	if(a == output.size()-1)
+		b = output[0];
+	else
+		b = output[a+1];
 	cout<<"[ ";
 	for(auto& i:b){ cout<<i<<", ";}
 	cout<<"\b\b ]";
